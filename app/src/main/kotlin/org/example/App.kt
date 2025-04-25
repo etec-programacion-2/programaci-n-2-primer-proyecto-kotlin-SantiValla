@@ -8,8 +8,11 @@ fun main() {
     val numero: Int = 5
     yo() 
     datos()
+    area()
     println(esParOImpar(numero))
     println(posnego0(numero))
+    loops1()
+    loops2()
 }
 fun yo() {
     val nombre: String = "Santi valla"
@@ -23,6 +26,12 @@ fun datos() {
     val double: Double = 1.5
     val booleano: Boolean = true
     println("String: $string, entero: $entero, double: $double, booleano: $booleano")
+}
+fun area() {
+    val base: Int = 10
+    val altura: Int = 5
+    val area: Int = base * altura
+    println("El área del rectángulo es: $area")
 }
 //paso 3
 fun esParOImpar(numero: Int): String {
@@ -40,4 +49,35 @@ fun posnego0(numero: Int): String {
     } else {
         "$numero es cero"
     }  
+}
+//paso 4
+fun loops1() {
+    for (i in 1..10) {
+        println("metodo for: $i")
+    }
+    var j: Int= 1
+    while (j<=10) {
+        println("metodo while: $j")
+        j++
+    }
+    var k: Int= 1
+    do {
+        println("metodo do while: $k")
+        k++
+    } while (k<=10)
+}
+fun loops2() {
+    for (l in 1..10 step 2) {
+        println("metodo for: $i")
+    }
+    var m: Int= 2
+    while (m<=20) {
+        println("metodo while: $j")
+        m++2
+    }
+    var n: Int= 2
+    do {
+        println("metodo do while: $k")
+        n++2
+    } while (n<=20)
 }
