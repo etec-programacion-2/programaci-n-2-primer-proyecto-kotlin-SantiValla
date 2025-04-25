@@ -5,8 +5,11 @@ package org.example
 //paso 1
 fun main() {
     println("hola kotlin")
+    val numero: Int = 5
     yo() 
     datos()
+    println(esParOImpar(numero))
+    println(posnego0(numero))
 }
 fun yo() {
     val nombre: String = "Santi valla"
@@ -20,4 +23,21 @@ fun datos() {
     val double: Double = 1.5
     val booleano: Boolean = true
     println("String: $string, entero: $entero, double: $double, booleano: $booleano")
+}
+//paso 3
+fun esParOImpar(numero: Int): String {
+    return if (numero % 2 == 0) {
+        "$numero es par"
+    } else {
+        "$numero es impar"
+    }
+}
+fun posnego0(numero: Int): String {
+    return if (numero > 0) {
+        "$numero es positivo"
+    } else if (numero < 0) {
+       "$numero es negativo"
+    } else {
+        "$numero es cero"
+    }  
 }
